@@ -61,7 +61,7 @@ class RunAsRoot(Exception):
     """Raised to indicate that the daemon is running as root."""
 
 
-class BaseAppServerSvc(CoreApplication, Daemonize):
+class BaseAppServerSvc(Daemonize):
     log_mgr_class = DaemonLogManager
     _usr_path = None
 

@@ -11,8 +11,10 @@ except ImportError:
     ON_WINDOWS = False
     SYS_PATH = "/etc/portransferd/"
 
+from watcher.core_app import CoreApplication
 
-class AppServerSvc(BaseAppServerSvc):
+
+class AppServerSvc(CoreApplication, BaseAppServerSvc):
     _sys_path = SYS_PATH
 
 

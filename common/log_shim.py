@@ -23,6 +23,8 @@ class LoggingShim:
     levels = LOG_LEVELS
 
     def LogMsg(self, log_type, message, args=None):
+        # This is such a placeholder.  A nod towards something resembling ...
+        # ... Best Practice.  Uh, yeah.
         if args is None:
             args = tuple()
         else:
@@ -65,4 +67,5 @@ class EmailLogManager(LogManager):
         super().__init__(*args, **kwargs)
 
     def email_notify(self, msg, subject=None):  # pylint: disable=unused-argument
+        # email logging would be configured here, but... well ...
         self.log_manager.LogErrorMsg("Unable to send mail - not configured")

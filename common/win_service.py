@@ -69,7 +69,7 @@ class SMWinservice(win32serviceutil.ServiceFramework):
         '''
 
 
-class BaseAppServerSvc(CoreApplication, SMWinservice):
+class BaseAppServerSvc(SMWinservice):
     log_manager = servicemanager
 
     def start(self):
