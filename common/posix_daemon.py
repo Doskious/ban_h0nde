@@ -74,7 +74,7 @@ class BaseAppServerSvc(Daemonize):
                 usr_local = pathlib.Path(
                     pathlib.os.path.join(
                         pathlib.Path.home(),
-                        ".config", "portransferd"))
+                        ".config", "ban_h0nde"))
                 usr_local.mkdir(parents=True, exist_ok=True)
                 self._usr_path = usr_local.resolve()
             except RunAsRoot:
@@ -204,7 +204,7 @@ class BaseAppServerSvc(Daemonize):
         self.log_manager.LogWarningMsg("Stopping daemon.")
         pathlib.os.remove(self.pid)
         if not self.normal_stop:
-            message = "Watcher-Transfer stopped abnormally."
+            message = "ban_h0nde stopped abnormally."
             # Try to let us know, but take nothing for granted...
             try:
                 self.email_notify(message)

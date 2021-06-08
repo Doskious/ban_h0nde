@@ -12,14 +12,14 @@ def exe_path(default_path=BASE_DIR, on_windows=False):
         # extends the sys module by a flag `frozen=True`
         # This should return the directory to look for the settings.json
         # file.
-        # On Windows, that's in C:\ProgramData\WatcherTransfer\
-        # On Linux, that's in /etc/watcher/
+        # On Windows, that's in C:\ProgramData\ban_h0nde\
+        # On Linux, that's in /etc/ban_h0nde/
         if on_windows:
             app_path_list = (
-                "C:\\ProgramData", "WatcherTransfer", 'settings.json')
+                "C:\\ProgramData", "ban_h0nde", 'settings.json')
         else:
             app_path_list = (
-                '/etc', 'watcher', 'settings.json')
+                '/etc', 'ban_h0nde', 'settings.json')
         application_path = pathlib.os.path.join(*app_path_list)
         # check to see if this path exists.  If not, try to create it, or
         # fall back to sys.executable
